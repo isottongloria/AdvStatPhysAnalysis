@@ -1,0 +1,11 @@
+model{
+
+  # Likelihood
+  y ~ dbinom(p, n)
+
+  # Prior
+  p ~ dbeta(alpha, beta)
+  alpha <- 1 # prior successes
+  beta <- 10 # prior failures
+
+}
